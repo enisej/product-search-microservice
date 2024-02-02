@@ -1,5 +1,5 @@
 const { VALIDATION } = require("../utils/consts");
-
+const ApiError = require('../utils/api-error');
 class ProductSearchValidator {
     static validateSearchQuery(q, page) {
         ProductSearchValidator.validateParamsExist(q, page);
@@ -14,20 +14,20 @@ class ProductSearchValidator {
 
     static validateParamsExist(q, page) {
         if (!q && !page) {
-            throw Error(VALIDATION.PARAMS)
+            throw ApiError.badRequest(VALIDATION.PARAMS);
         }
     }
 
     static validateQueryString(q) {
         if (!q || typeof q !== 'string' || q.length < 1) {
-            throw Error(VALIDATION.QUERY)
+            throw ApiError.badRequest(VALIDATION.PARAMS);
         }
     }
 
     static validatePageParameter(page) {
         const parsedPage = parseInt(page, 10);
         if (isNaN(parsedPage) || parsedPage < 1) {
-            throw Error(VALIDATION.PAGE)
+            throw ApiError.badRequest(VALIDATION.PAGE);
         }
         return parsedPage;
     }

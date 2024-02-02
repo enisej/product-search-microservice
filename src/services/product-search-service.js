@@ -1,5 +1,6 @@
 const {get} = require('axios');
 const {ProductDTO} = require("../data-transfer-objects/product-dto");
+const ApiError = require("../utils/api-error");
 
 class ProductSearchService {
     constructor() {
@@ -24,7 +25,7 @@ class ProductSearchService {
         try {
             return products.map((product) => new ProductDTO(product));
         }catch (error){
-            throw error
+            throw ApiError.badRequest()
         }
 
     }
