@@ -1,4 +1,4 @@
-const {percentageOf} = require("../utils/number-helpers")
+const {percentageOf} = require("../../utils/number-helpers")
 
 class ProductDTO {
     constructor(product) {

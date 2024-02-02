@@ -1,5 +1,5 @@
 const {get} = require('axios');
-const {ProductDTO} = require("../data-transfer-objects/product-dto");
+const {ProductDTO} = require("../data-transfer-objects/products/product-dto");
 const ApiError = require("../utils/api-error");
 
 class ProductSearchService {
