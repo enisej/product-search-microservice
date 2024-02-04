@@ -10,5 +10,7 @@ module.exports = {
     NOT_FOUND: '404 not found!',
     API_ERROR: 'Error from DummyJson API: ',
     UNEXPECTED: 'Unexpected error!',
+    CONTENT_TYPE: 'Content-Type header is missing.',
+    UNSUPPORTED_CONTENT_TYPE: 'Unsupported Content Type:'
   },
 };

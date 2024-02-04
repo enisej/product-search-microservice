@@ -17,5 +17,6 @@ module.exports = function errorHandlingMiddleware(err, req, res, next) {
       message: ERRORS.UNEXPECTED,
     });
   }
+
   next();
 };
