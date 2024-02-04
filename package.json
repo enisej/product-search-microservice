@@ -6,7 +6,8 @@
   "scripts": {
     "dev": " nodemon src/app.js ",
     "prod": "node src/app.js",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -19,7 +20,10 @@
   },
   "devDependencies": {
     "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1"
   },
   "config": {
     "commitizen": {
