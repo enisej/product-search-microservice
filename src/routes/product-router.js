@@ -1,7 +1,9 @@
-const Router = require('express')
-const router = new Router()
-const productsController = require('../controllers/products-controller')
+const Router = require('express');
 
-router.post('/products/search', productsController.search)
+const router = new Router();
+const productsController = require('../controllers/products-controller');
+const productSearchValidator = require('../validation/product-search-validator');
 
-module.exports = router
+router.post('/products/search', productSearchValidator, productsController.search);
+
+module.exports = router;
