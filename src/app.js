@@ -6,6 +6,7 @@ const errorHandlingMiddleware = require('./middleware/error-handling-middleware'
 const loggingMiddleware = require('./middleware/logging-middleware');
 const requestMiddleware = require('./middleware/request-middleware');
 const responseMiddleware = require('./middleware/response-middleware');
+const {ERRORS} = require("./utils/consts");
 
 const PORT = process.env.PORT || 5000;
 
@@ -17,7 +18,10 @@ app.use(requestMiddleware);
 
 app.use('/api', router);
 app.use((req, res, next) => {
-  next(ApiError.notFound());
+  res.status(404).send({
+    code: 404,
+    message: ERRORS.NOT_FOUND,
+  });
 });
 
 app.use(errorHandlingMiddleware);
