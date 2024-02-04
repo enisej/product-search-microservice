@@ -11,6 +11,6 @@ module.exports = {
     API_ERROR: 'Error from DummyJson API: ',
     UNEXPECTED: 'Unexpected error!',
     CONTENT_TYPE: 'Content-Type header is missing.',
-    UNSUPPORTED_CONTENT_TYPE: 'Unsupported Content Type:'
+    UNSUPPORTED_CONTENT_TYPE: 'Unsupported Content Type:',
   },
 };
