@@ -1,5 +1,5 @@
 services:
-  products-search:
+  app:
     build:
       context: .
     container_name: products-search-service
