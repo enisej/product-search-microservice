@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const router = require('./routes/product-router');
 const errorHandlingMiddleware = require('./middleware/error-handling-middleware');
 const loggingMiddleware = require('./middleware/logging-middleware');
@@ -10,7 +11,7 @@ const { ERRORS } = require('./utils/consts');
 const PORT = process.env.PORT || 5000;
 
 const app = express();
-
+app.use(cors());
 app.use(responseMiddleware);
 app.use(loggingMiddleware);
 app.use(requestMiddleware);
