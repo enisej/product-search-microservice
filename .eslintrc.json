@@ -10,16 +10,12 @@
     "plugin:jest/recommended"
   ],
   "parserOptions": {
-    "ecmaVersion": "latest"
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
   "rules": {
-    "class-methods-use-this": [
-      "error",
-      {
-        "exceptMethods": [
-          "search"
-        ]
-      }
-    ]
-  }
+    "max-len": ["error", { "code": 120 }],
+    "no-eval": "off"
+  },
+  "ignorePatterns": ["jest.config.js"]
 }
