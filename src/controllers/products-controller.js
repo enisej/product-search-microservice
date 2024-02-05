@@ -1,6 +1,7 @@
 const productSearchService = require('../services/product-search-service');
 
 class ProductsController {
+  // eslint-disable-next-line class-methods-use-this
   async search(req, res, next) {
     try {
       const { q, page } = req.body;

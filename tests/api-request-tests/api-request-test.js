@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.post('/api/products/search', productsController.search);
 
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
@@ -20,14 +20,11 @@ describe('Products Controller Tests', () => {
     jest.resetAllMocks();
   });
 
-  
-
   it('should handle successful response', async () => {
-
     const mockProducts = [{
-      "title": "iPhone 9",
-      "description": "An apple mobile which is nothing like apple",
-      "final_price": 477.85
+      title: 'iPhone 9',
+      description: 'An apple mobile which is nothing like apple',
+      final_price: 477.85,
     }];
     productSearchService.getTransformedProducts.mockResolvedValueOnce(mockProducts);
 
@@ -35,6 +32,5 @@ describe('Products Controller Tests', () => {
 
     expect(response.status).toBe(200);
     expect(response.body).toEqual(mockProducts);
-  });  
-
+  });
 });
