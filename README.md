@@ -46,8 +46,8 @@ _Run this command `docker exec -it products-search-service /bin/bash`_
 
 ## Additional Tasks Completed
 
-1. [X] Logging 
-2. [X] Data input-output formats
-3. [X] Add automated tests **(partly)**
-4. [X] Add Eslint
-5. [X] Vue JS Form
+1. ✅ Logging 
+2. ✅ Data input-output formats
+3. ✅ Add automated tests **(partly)**
+4. ✅ Add Eslint
+5. ✅ Vue JS Form - [Product-search-form](https://github.com/enisej/products-search-form)
